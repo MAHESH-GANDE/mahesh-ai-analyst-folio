@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Linkedin, Download, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Download, Send, Github } from "lucide-react";
 
 const ContactSection = () => {
   const contactInfo = [
@@ -29,6 +29,12 @@ const ContactSection = () => {
       label: "LinkedIn",
       value: "mahesh-gande1997",
       link: "https://linkedin.com/in/mahesh-gande1997"
+    },
+    {
+      icon: <Github className="w-6 h-6" />,
+      label: "GitHub",
+      value: "mahesh-gande",
+      link: "https://github.com/mahesh-gande"
     }
   ];
 
@@ -40,7 +46,7 @@ const ContactSection = () => {
             Let's Connect
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to discuss data analytics opportunities and collaboration
+            Ready to discuss campaign analytics opportunities and collaboration
           </p>
         </div>
 
@@ -90,6 +96,12 @@ const ContactSection = () => {
                   <Button 
                     className="w-full justify-start bg-primary hover:bg-primary/90 text-primary-foreground shadow-medium transition-spring"
                     size="lg"
+                    onClick={() => {
+                      const link = document.createElement('a');
+                      link.href = '/Mahesh_Gande_Campaign_Analyst_Resume.pdf';
+                      link.download = 'Mahesh_Gande_Campaign_Analyst_Resume.pdf';
+                      link.click();
+                    }}
                   >
                     <Download className="mr-3 h-5 w-5" />
                     Download Complete Resume
@@ -98,9 +110,19 @@ const ContactSection = () => {
                     variant="outline"
                     className="w-full justify-start border-primary/20 text-primary hover:bg-primary hover:text-primary-foreground transition-spring"
                     size="lg"
+                    onClick={() => window.open('https://linkedin.com/in/mahesh-gande1997', '_blank')}
                   >
                     <Linkedin className="mr-3 h-5 w-5" />
                     View LinkedIn Profile
+                  </Button>
+                  <Button 
+                    variant="outline"
+                    className="w-full justify-start border-primary/20 text-primary hover:bg-primary hover:text-primary-foreground transition-spring"
+                    size="lg"
+                    onClick={() => window.open('https://github.com/mahesh-gande', '_blank')}
+                  >
+                    <Github className="mr-3 h-5 w-5" />
+                    View GitHub Profile
                   </Button>
                 </div>
               </CardContent>

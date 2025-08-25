@@ -16,8 +16,8 @@ const HeroSection = () => {
               <div className="w-48 h-48 rounded-full overflow-hidden shadow-glow border-4 border-white/20 transition-spring hover:scale-105">
                 <img 
                   src="/lovable-uploads/45a65c1d-04d2-48c9-b108-f5634562c231.png"
-                  alt="Mahesh Gande - Data Analyst & AI Specialist"
-                  className="w-full h-full object-cover"
+                  alt="Mahesh Gande - Campaign Analyst & AI Specialist"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               {/* Floating accent ring */}
@@ -30,7 +30,7 @@ const HeroSection = () => {
             Mahesh Gande
           </h1>
           <h2 className="text-2xl md:text-3xl font-light mb-6 text-white/90">
-            Data Analyst | AI & Automation Specialist
+            Campaign Analyst | AI & Automation Specialist
           </h2>
           
           {/* Location & Contact */}
@@ -51,9 +51,9 @@ const HeroSection = () => {
 
           {/* Summary */}
           <p className="text-xl leading-relaxed mb-10 max-w-3xl mx-auto text-white/90">
-            Data-driven analyst with proven expertise in automation, reporting, and marketing analytics. 
+            Campaign analyst with proven expertise in automation, reporting, and marketing analytics. 
             Certified in Microsoft Data Analysis and GenAI-powered simulations, proficient in SQL, Excel, 
-            Power BI, and Python. Passionate about leveraging data to drive business strategy and empower smarter decisions.
+            Power BI, and Python. Passionate about leveraging data to drive campaign performance and empower smarter marketing decisions.
           </p>
 
           {/* CTA Buttons */}
@@ -62,6 +62,12 @@ const HeroSection = () => {
               size="lg" 
               variant="secondary"
               className="bg-white text-primary hover:bg-white/90 shadow-medium transition-spring"
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/Mahesh_Gande_Campaign_Analyst_Resume.pdf';
+                link.download = 'Mahesh_Gande_Campaign_Analyst_Resume.pdf';
+                link.click();
+              }}
             >
               <Download className="mr-2 h-5 w-5" />
               Download Resume
@@ -70,6 +76,7 @@ const HeroSection = () => {
               size="lg" 
               variant="outline"
               className="border-white/30 text-white hover:bg-white/10 transition-spring"
+              onClick={() => window.open('https://linkedin.com/in/mahesh-gande1997', '_blank')}
             >
               <Linkedin className="mr-2 h-5 w-5" />
               LinkedIn Profile
