@@ -29,9 +29,6 @@ const HeroSection = () => {
           <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight">
             Mahesh Gande
           </h1>
-          <h2 className="text-2xl md:text-3xl font-light mb-6 text-white/90">
-            Campaign Analyst | AI & Automation Specialist
-          </h2>
           
           {/* Location & Contact */}
           <div className="flex flex-wrap justify-center items-center gap-6 mb-8 text-white/80">
@@ -72,8 +69,8 @@ const HeroSection = () => {
             </Button>
             <Button 
               size="lg" 
-              variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 transition-spring"
+              variant="secondary"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-medium transition-spring"
               onClick={() => window.open('https://linkedin.com/in/mahesh-gande1997', '_blank')}
             >
               <Linkedin className="mr-2 h-5 w-5" />
@@ -81,8 +78,8 @@ const HeroSection = () => {
             </Button>
             <Button 
               size="lg" 
-              variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 transition-spring"
+              variant="secondary"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-medium transition-spring"
               onClick={() => window.open('https://github.com/mahesh-gande', '_blank')}
             >
               <Github className="mr-2 h-5 w-5" />
