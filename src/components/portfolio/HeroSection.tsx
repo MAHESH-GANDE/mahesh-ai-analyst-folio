@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Download, MapPin, Mail, Phone, Linkedin } from "lucide-react";
+import { Download, MapPin, Mail, Phone, Linkedin, Github } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -51,9 +51,7 @@ const HeroSection = () => {
 
           {/* Summary */}
           <p className="text-xl leading-relaxed mb-10 max-w-3xl mx-auto text-white/90">
-            Campaign analyst with proven expertise in automation, reporting, and marketing analytics. 
-            Certified in Microsoft Data Analysis and GenAI-powered simulations, proficient in SQL, Excel, 
-            Power BI, and Python. Passionate about leveraging data to drive campaign performance and empower smarter marketing decisions.
+            🎯 Campaign Analyst | Transitioning to Data Analyst | Microsoft Certified & Tata | Excel • SQL • Power BI • Python Basics | No Code AI Agent Builder | GenAI
           </p>
 
           {/* CTA Buttons */}
@@ -80,6 +78,15 @@ const HeroSection = () => {
             >
               <Linkedin className="mr-2 h-5 w-5" />
               LinkedIn Profile
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="border-white/30 text-white hover:bg-white/10 transition-spring"
+              onClick={() => window.open('https://github.com/mahesh-gande', '_blank')}
+            >
+              <Github className="mr-2 h-5 w-5" />
+              GitHub Profile
             </Button>
           </div>
         </div>
