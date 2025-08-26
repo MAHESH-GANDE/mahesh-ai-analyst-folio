@@ -28,43 +28,31 @@ const HeroSection = () => {
               transition={{ duration: 0.3 }}
               className="relative"
             >
-              {/* Professional background circle */}
+              {/* Professional background glow */}
               <div className="absolute inset-0 w-48 h-48 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 blur-xl"></div>
               
               {/* Main profile container */}
-              <div className="relative w-48 h-48 rounded-full overflow-hidden shadow-glow border-4 border-white/20 backdrop-blur-sm bg-white/10">
-                {/* Clean background overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/70 to-background/90 rounded-full"></div>
-                
-                {/* Profile image */}
+              <div className="relative w-48 h-48 rounded-full overflow-hidden shadow-glow border-4 border-white/20 backdrop-blur-sm">
+                {/* Clear profile image - no overlays to maintain clarity */}
                 <img 
                   src="/lovable-uploads/45a65c1d-04d2-48c9-b108-f5634562c231.png"
                   alt="Mahesh Gande - Campaign Analyst & AI Specialist"
-                  className="relative z-10 w-full h-full object-cover object-center scale-110 rounded-full mix-blend-multiply dark:mix-blend-screen"
+                  className="w-full h-full object-cover object-center rounded-full"
                   style={{ 
-                    filter: 'contrast(1.1) brightness(1.05) saturate(1.1)',
-                    maskImage: 'radial-gradient(circle, black 60%, transparent 100%)'
+                    filter: 'contrast(1.2) brightness(1.1) saturate(1.1)'
                   }}
                 />
-                
-                {/* Professional overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-accent/5 rounded-full mix-blend-overlay"></div>
               </div>
               
               {/* Animated accent ring */}
               <motion.div 
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 rounded-full border-2 border-gradient-to-r from-primary/30 via-accent/30 to-primary/30"
-                style={{
-                  background: 'conic-gradient(from 0deg, hsl(var(--primary) / 0.3), hsl(var(--accent) / 0.3), hsl(var(--primary) / 0.3))',
-                  WebkitMask: 'radial-gradient(circle, transparent 46%, black 48%, black 50%, transparent 52%)',
-                  mask: 'radial-gradient(circle, transparent 46%, black 48%, black 50%, transparent 52%)'
-                }}
+                className="absolute inset-0 rounded-full border-2 border-accent/40"
               />
               
               {/* Static outer glow */}
-              <div className="absolute inset-0 rounded-full border border-accent/20 shadow-[0_0_30px_hsl(var(--accent)/0.3)]"></div>
+              <div className="absolute inset-0 rounded-full border border-primary/30 shadow-[0_0_40px_hsl(var(--primary)/0.4)]"></div>
             </motion.div>
           </motion.div>
 
