@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Download, MapPin, Mail, Phone, Linkedin, Github } from "lucide-react";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
@@ -8,12 +9,26 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-hero"></div>
       
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center text-white">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative z-10 container mx-auto px-4 text-center text-white"
+      >
         <div className="max-w-4xl mx-auto">
           {/* Profile Image */}
-          <div className="mb-8 flex justify-center">
-            <div className="relative">
-              <div className="w-48 h-48 rounded-full overflow-hidden shadow-glow border-4 border-white/20 transition-spring hover:scale-105">
+          <motion.div 
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-8 flex justify-center"
+          >
+            <motion.div 
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+              className="relative"
+            >
+              <div className="w-48 h-48 rounded-full overflow-hidden shadow-glow border-4 border-white/20">
                 <img 
                   src="/lovable-uploads/45a65c1d-04d2-48c9-b108-f5634562c231.png"
                   alt="Mahesh Gande - Campaign Analyst & AI Specialist"
@@ -21,14 +36,23 @@ const HeroSection = () => {
                 />
               </div>
               {/* Floating accent ring */}
-              <div className="absolute inset-0 rounded-full border-2 border-accent/30 animate-pulse"></div>
-            </div>
-          </div>
+              <motion.div 
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-0 rounded-full border-2 border-accent/30"
+              />
+            </motion.div>
+          </motion.div>
 
           {/* Name & Title */}
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-5xl md:text-6xl font-bold mb-4 tracking-tight"
+          >
             Mahesh Gande
-          </h1>
+          </motion.h1>
           
           {/* Location & Contact */}
           <div className="flex flex-wrap justify-center items-center gap-6 mb-8 text-white/80">
@@ -87,7 +111,7 @@ const HeroSection = () => {
             </Button>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Floating Elements */}
       <div className="absolute top-1/4 left-10 w-20 h-20 bg-white/5 rounded-full blur-xl"></div>

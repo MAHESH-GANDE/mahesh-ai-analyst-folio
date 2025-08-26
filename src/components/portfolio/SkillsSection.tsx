@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { motion } from "framer-motion";
 import { 
   Database, 
   BarChart3, 
@@ -52,45 +53,66 @@ const SkillsSection = () => {
   return (
     <section className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl font-bold mb-4 text-foreground">
             Technical Skills
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             A comprehensive toolkit for modern data analysis and business intelligence
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
-            <Card 
-              key={index} 
-              className="group hover:shadow-medium transition-spring cursor-pointer bg-gradient-card border-border/50"
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8 }}
             >
-              <CardHeader className="pb-4">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className={`${category.color} transition-spring group-hover:scale-110`}>
-                    {category.icon}
-                  </div>
-                  <CardTitle className="text-xl font-semibold">
-                    {category.title}
-                  </CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill, skillIndex) => (
-                    <Badge 
-                      key={skillIndex}
-                      variant="secondary" 
-                      className="text-sm hover:bg-primary hover:text-primary-foreground transition-smooth cursor-default"
+              <Card className="group hover:shadow-medium transition-all duration-300 cursor-pointer bg-gradient-card border-border/50 h-full">
+                <CardHeader className="pb-4">
+                  <div className="flex items-center gap-3 mb-3">
+                    <motion.div 
+                      className={`${category.color}`}
+                      whileHover={{ scale: 1.2, rotate: 5 }}
+                      transition={{ duration: 0.3 }}
                     >
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+                      {category.icon}
+                    </motion.div>
+                    <CardTitle className="text-xl font-semibold group-hover:text-primary transition-smooth">
+                      {category.title}
+                    </CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {category.skills.map((skill, skillIndex) => (
+                      <motion.div
+                        key={skillIndex}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <Badge 
+                          variant="secondary" 
+                          className="text-sm hover:bg-primary hover:text-primary-foreground transition-all duration-300 cursor-pointer"
+                        >
+                          {skill}
+                        </Badge>
+                      </motion.div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>
