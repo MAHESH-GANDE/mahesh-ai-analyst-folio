@@ -5,19 +5,19 @@ import { Building, Calendar, MapPin } from "lucide-react";
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "Data Analyst",
-      company: "Current Role",
+      title: "Campaign Analyst",
+      company: "Profuse Services",
       location: "Bengaluru, India",
       period: "2024 - Present",
       type: "Full-time",
-      description: "Specializing in data analytics, automation, and AI-powered business intelligence solutions. Leading initiatives in marketing analytics and process optimization.",
+      description: "Specializing in campaign analytics, marketing automation, and AI-powered business intelligence solutions. Leading initiatives in digital marketing analytics and campaign performance optimization.",
       achievements: [
-        "Developed automated reporting systems reducing manual work by 75%",
-        "Implemented AI-driven data query solutions improving analysis speed",
-        "Created comprehensive marketing analytics dashboards for ROI tracking",
-        "Optimized data collection and processing workflows"
+        "Developed automated campaign reporting systems reducing manual work by 75%",
+        "Implemented AI-driven marketing data analysis improving campaign insights",
+        "Created comprehensive campaign performance dashboards for ROI tracking",
+        "Optimized campaign data collection and attribution workflows"
       ],
-      skills: ["Excel", "SQL", "Power BI", "Python", "AI Analytics"]
+      skills: ["Excel", "SQL", "Power BI", "Python", "Campaign Analytics"]
     },
     {
       title: "Business Intelligence Analyst",
