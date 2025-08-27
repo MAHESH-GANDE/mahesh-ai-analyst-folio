@@ -84,7 +84,7 @@ const HeroSection = () => {
 
           {/* Summary */}
           <p className="text-xl leading-relaxed mb-10 max-w-3xl mx-auto text-white/90">
-            🎯 Campaign Analyst | Transitioning to Data Analyst | Microsoft Certified & Tata | Excel • SQL • Power BI • Python Basics | No Code AI Agent Builder | GenAI
+            🎯 Campaign Analyst at Profuse Services | Microsoft Certified & Tata | Excel • SQL • Power BI • Python Basics | No Code AI Agent Builder | GenAI
           </p>
 
           {/* CTA Buttons */}
