@@ -6,7 +6,7 @@ import { ExternalLink, Calendar, Target, TrendingUp, Github } from "lucide-react
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Godavari Rice Mart",
+      title: "🌾 Godavari Rice Mart",
       date: "2024",
       description: "A modern, production-ready e-commerce platform for rice and grocery delivery built with React, TypeScript, and Google Maps API integration for location-based services.",
       tools: ["React", "TypeScript", "Vite", "Tailwind CSS", "Google Maps API", "Responsive Design"],
