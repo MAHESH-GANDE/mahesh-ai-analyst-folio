@@ -1,10 +1,25 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Calendar, Target, TrendingUp } from "lucide-react";
+import { ExternalLink, Calendar, Target, TrendingUp, Github } from "lucide-react";
 
 const ProjectsSection = () => {
   const projects = [
+    {
+      title: "Godavari Rice Mart",
+      date: "2024",
+      description: "A modern, production-ready e-commerce platform for rice and grocery delivery built with React, TypeScript, and Google Maps API integration for location-based services.",
+      tools: ["React", "TypeScript", "Vite", "Tailwind CSS", "Google Maps API", "Responsive Design"],
+      achievements: [
+        "Modern e-commerce interface with product catalog",
+        "Real-time location services with Google Maps integration", 
+        "Responsive design optimized for mobile and desktop",
+        "Production-ready code with TypeScript for type safety"
+      ],
+      type: "Full-Stack Development",
+      impact: "E-commerce Platform",
+      github: "https://github.com/mahesh-gande/godavari-rice-mart"
+    },
     {
       title: "Tata Group Data Analytics Simulation",
       date: "July 2025",
@@ -123,13 +138,16 @@ const ProjectsSection = () => {
                       <TrendingUp className="w-4 h-4" />
                       {project.impact}
                     </div>
-                    <Button 
-                      variant="ghost" 
-                      size="sm"
-                      className="text-primary hover:text-primary-foreground hover:bg-primary transition-smooth"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                    </Button>
+                    {project.github && (
+                      <Button 
+                        variant="ghost" 
+                        size="sm"
+                        className="text-primary hover:text-primary-foreground hover:bg-primary transition-smooth"
+                        onClick={() => window.open(project.github, '_blank')}
+                      >
+                        <Github className="w-4 h-4" />
+                      </Button>
+                    )}
                   </div>
                 </div>
               </CardContent>
