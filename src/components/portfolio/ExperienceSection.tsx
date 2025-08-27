@@ -60,7 +60,7 @@ const ExperienceSection = () => {
             Professional Experience
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Proven track record in data analytics and business intelligence
+            Proven track record in campaign analytics, operations, and business intelligence
           </p>
         </div>
 
