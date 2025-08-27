@@ -20,19 +20,19 @@ const ExperienceSection = () => {
       skills: ["Excel", "SQL", "Power BI", "Python", "Campaign Analytics"]
     },
     {
-      title: "Business Intelligence Analyst",
-      company: "Previous Experience",
+      title: "Campaign Executive",
+      company: "KrazyBee Services",
       location: "Bengaluru, India", 
       period: "2023 - 2024",
-      type: "Contract",
-      description: "Focused on developing business intelligence solutions and implementing data-driven decision making frameworks across multiple business units.",
+      type: "Full-time",
+      description: "Executed multi-channel marketing campaigns and managed campaign performance tracking. Focused on digital marketing initiatives and campaign optimization strategies.",
       achievements: [
-        "Built interactive Power BI dashboards for executive reporting",
-        "Streamlined data integration processes using SQL and Python",
-        "Delivered insights leading to 20% improvement in campaign performance",
-        "Established data quality monitoring and validation procedures"
+        "Managed end-to-end campaign execution across multiple digital channels",
+        "Improved campaign performance metrics through data-driven optimizations",
+        "Delivered campaign insights leading to 20% improvement in engagement rates",
+        "Established campaign tracking and performance measurement procedures"
       ],
-      skills: ["Power BI", "SQL", "Data Visualization", "Business Analytics"]
+      skills: ["Campaign Management", "Digital Marketing", "Analytics", "Performance Tracking"]
     }
   ];
 
