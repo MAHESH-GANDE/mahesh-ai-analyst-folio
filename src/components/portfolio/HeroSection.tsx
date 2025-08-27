@@ -35,7 +35,7 @@ const HeroSection = () => {
               <div className="relative w-48 h-48 rounded-full overflow-hidden shadow-glow border-4 border-white/20 backdrop-blur-sm">
                 {/* Clear profile image - no overlays to maintain clarity */}
                 <img 
-                  src="/lovable-uploads/45a65c1d-04d2-48c9-b108-f5634562c231.png"
+                  src="/lovable-uploads/5f38b4ef-b145-41ca-8531-8b81db15af16.png"
                   alt="Mahesh Gande - Campaign Analyst & AI Specialist"
                   className="w-full h-full object-cover object-center rounded-full"
                   style={{ 
