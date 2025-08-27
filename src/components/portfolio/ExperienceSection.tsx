@@ -33,6 +33,22 @@ const ExperienceSection = () => {
         "Established campaign tracking and performance measurement procedures"
       ],
       skills: ["Campaign Management", "Digital Marketing", "Analytics", "Performance Tracking"]
+    },
+    {
+      title: "Operation Executive",
+      company: "TeamLease",
+      location: "Bengaluru, India", 
+      period: "2022 - 2023",
+      type: "Full-time",
+      description: "Managed operational processes and streamlined workflow efficiency across multiple departments. Focused on process optimization, quality assurance, and cross-functional team coordination.",
+      achievements: [
+        "Streamlined operational workflows reducing processing time by 40%",
+        "Implemented quality control measures improving accuracy by 30%",
+        "Coordinated cross-functional teams to achieve departmental KPIs",
+        "Developed standard operating procedures for consistent service delivery",
+        "Managed client communications and resolved operational issues promptly"
+      ],
+      skills: ["Process Optimization", "Quality Assurance", "Team Coordination", "Client Management"]
     }
   ];
 
