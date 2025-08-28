@@ -6,7 +6,7 @@ import { ExternalLink, Calendar, Target, TrendingUp, Github } from "lucide-react
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "📊 Advanced Analytics Intelligence Platform",
+      title: "🌾 Godavari Rice Mart",
       date: "2024",
       description: "A comprehensive data analytics platform built with React, TypeScript, and advanced visualization libraries. Features real-time dashboard capabilities, AI-powered insights, and interactive data exploration tools for enterprise-level analytics.",
       tools: ["React", "TypeScript", "D3.js", "Chart.js", "Python API", "Power BI Embedded", "Responsive Design"],
@@ -18,7 +18,7 @@ const ProjectsSection = () => {
       ],
       type: "Data Analytics Platform",
       impact: "Business Intelligence",
-      github: "https://github.com/mahesh-gande/analytics-intelligence-platform"
+      github: "https://github.com/mahesh-gande/godavari-rice-mart"
     },
     {
       title: "Tata Group Data Analytics Simulation",
