@@ -67,7 +67,9 @@ const AboutSection = () => {
                   <p className="mb-4">
                     What sets me apart is my ability to bridge the gap between technical analysis and business strategy. 
                     I don't just crunch numbers—I uncover the narrative within the data and present findings in ways that 
-                    stakeholders can immediately understand and act upon.
+                    stakeholders can immediately understand and act upon. My strong communication skills enable me to 
+                    effectively collaborate with cross-functional teams, ensuring seamless knowledge transfer and alignment 
+                    across departments.
                   </p>
                   <p>
                     Currently, I'm expanding my expertise into advanced data analytics and AI, earning Microsoft certifications 
