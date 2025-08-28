@@ -6,19 +6,19 @@ import { ExternalLink, Calendar, Target, TrendingUp, Github } from "lucide-react
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "🌾 Godavari Rice Mart",
+      title: "📊 Advanced Analytics Intelligence Platform",
       date: "2024",
-      description: "A modern, production-ready e-commerce platform for rice and grocery delivery built with React, TypeScript, and Google Maps API integration for location-based services.",
-      tools: ["React", "TypeScript", "Vite", "Tailwind CSS", "Google Maps API", "Responsive Design"],
+      description: "A comprehensive data analytics platform built with React, TypeScript, and advanced visualization libraries. Features real-time dashboard capabilities, AI-powered insights, and interactive data exploration tools for enterprise-level analytics.",
+      tools: ["React", "TypeScript", "D3.js", "Chart.js", "Python API", "Power BI Embedded", "Responsive Design"],
       achievements: [
-        "Modern e-commerce interface with product catalog",
-        "Real-time location services with Google Maps integration", 
-        "Responsive design optimized for mobile and desktop",
-        "Production-ready code with TypeScript for type safety"
+        "Real-time data visualization dashboard with interactive charts",
+        "AI-powered insights engine with automated anomaly detection", 
+        "Responsive analytics interface optimized for mobile and desktop",
+        "Production-ready ETL pipeline with TypeScript for data integrity"
       ],
-      type: "Full-Stack Development",
-      impact: "E-commerce Platform",
-      github: "https://github.com/mahesh-gande/godavari-rice-mart"
+      type: "Data Analytics Platform",
+      impact: "Business Intelligence",
+      github: "https://github.com/mahesh-gande/analytics-intelligence-platform"
     },
     {
       title: "Tata Group Data Analytics Simulation",
