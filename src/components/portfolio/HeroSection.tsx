@@ -93,12 +93,7 @@ const HeroSection = () => {
               size="lg" 
               variant="secondary"
               className="bg-white text-primary hover:bg-white/90 shadow-medium transition-spring"
-              onClick={() => {
-                const link = document.createElement('a');
-                link.href = '/Mahesh_Gande_Campaign_Analyst_Resume.pdf';
-                link.download = 'Mahesh_Gande_Campaign_Analyst_Resume.pdf';
-                link.click();
-              }}
+              onClick={() => window.open('https://www.canva.com/design/DAGxSItoxxA/AfTYd0GN2gTvhg1VwDYMYQ/edit?ui=eyJHIjp7IkQiOnsiRCI6eyJBPyI6IkUifX19fQ&referrer=resumes-landing-page', '_blank')}
             >
               <Download className="mr-2 h-5 w-5" />
               Download Resume
