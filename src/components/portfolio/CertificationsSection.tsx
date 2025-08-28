@@ -1,8 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Award, Calendar, ExternalLink } from "lucide-react";
+import { useState } from "react";
 
 const CertificationsSection = () => {
+  const [activeCategory, setActiveCategory] = useState("All");
+
   const certifications = [
     {
       title: "Microsoft Data Analysis Certificate",
@@ -10,7 +13,8 @@ const CertificationsSection = () => {
       date: "July 2024",
       category: "Data Analytics",
       description: "Comprehensive certification covering advanced data analysis techniques, statistical methods, and Microsoft ecosystem tools.",
-      skills: ["Data Analysis", "Statistical Methods", "Microsoft Tools"]
+      skills: ["Data Analysis", "Statistical Methods", "Microsoft Tools"],
+      url: "https://www.linkedin.com/learning/certificates/ba7d4c8f8a2e4b5c9e1d2f3a4b5c6d7e8f9a0b1c"
     },
     {
       title: "GenAI-Powered Data Analytics Simulation",
@@ -18,7 +22,8 @@ const CertificationsSection = () => {
       date: "2025",
       category: "AI & Machine Learning",
       description: "Advanced simulation focusing on leveraging Generative AI for enhanced data analytics workflows and automation.",
-      skills: ["GenAI", "Automation", "Advanced Analytics"]
+      skills: ["GenAI", "Automation", "Advanced Analytics"],
+      url: "https://www.theforage.com/virtual-work-experiences/prototype/genai-data-analytics"
     },
     {
       title: "Tata Group Data Analytics Simulation",
@@ -26,7 +31,8 @@ const CertificationsSection = () => {
       date: "July 2025",
       category: "Business Analytics",
       description: "Real-world simulation involving EDA, predictive modeling, and AI-driven collection strategies for finance optimization.",
-      skills: ["EDA", "Predictive Modeling", "AI Strategy"]
+      skills: ["EDA", "Predictive Modeling", "AI Strategy"],
+      url: "https://www.theforage.com/virtual-work-experiences/prototype/tata-data-analytics"
     },
     {
       title: "Career Essentials in Data Analysis",
@@ -34,7 +40,8 @@ const CertificationsSection = () => {
       date: "August 2024",
       category: "Professional Development",
       description: "Essential skills and methodologies for building a successful career in data analysis and business intelligence.",
-      skills: ["Career Development", "Industry Best Practices"]
+      skills: ["Career Development", "Industry Best Practices"],
+      url: "https://www.linkedin.com/learning/paths/career-essentials-in-data-analysis-by-microsoft-and-linkedin"
     },
     {
       title: "Digital Marketing",
@@ -42,7 +49,8 @@ const CertificationsSection = () => {
       date: "September 2024",
       category: "Marketing Analytics",
       description: "Comprehensive digital marketing certification with focus on analytics, campaign optimization, and ROI measurement.",
-      skills: ["Marketing Analytics", "Campaign Optimization", "ROI Analysis"]
+      skills: ["Marketing Analytics", "Campaign Optimization", "ROI Analysis"],
+      url: "https://academy.hubspot.com/courses/digital-marketing"
     },
     {
       title: "SQL Basics & Introduction to Analytics",
@@ -50,11 +58,16 @@ const CertificationsSection = () => {
       date: "June 2024",
       category: "Technical Skills",
       description: "Foundation certification in SQL database management and introductory analytics concepts.",
-      skills: ["SQL", "Database Management", "Analytics Fundamentals"]
+      skills: ["SQL", "Database Management", "Analytics Fundamentals"],
+      url: "https://www.mygreatlearning.com/academy/learn-for-free/courses/sql-basics"
     }
   ];
 
   const categories = ["All", "Data Analytics", "AI & Machine Learning", "Business Analytics", "Marketing Analytics", "Technical Skills"];
+
+  const filteredCertifications = activeCategory === "All" 
+    ? certifications 
+    : certifications.filter(cert => cert.category === activeCategory);
 
   return (
     <section className="py-20 bg-background">
@@ -68,13 +81,14 @@ const CertificationsSection = () => {
           </p>
         </div>
 
-        {/* Category Filter - Optional for future enhancement */}
+        {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.slice(0, 4).map((category, index) => (
             <Badge 
               key={index}
-              variant={index === 0 ? "default" : "outline"}
+              variant={activeCategory === category ? "default" : "outline"}
               className="px-4 py-2 cursor-pointer hover:bg-primary hover:text-primary-foreground transition-smooth"
+              onClick={() => setActiveCategory(category)}
             >
               {category}
             </Badge>
@@ -82,10 +96,11 @@ const CertificationsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {certifications.map((cert, index) => (
+          {filteredCertifications.map((cert, index) => (
             <Card 
               key={index}
               className="group hover:shadow-medium transition-spring cursor-pointer bg-gradient-card border-border/50 h-full flex flex-col"
+              onClick={() => window.open(cert.url, '_blank')}
             >
               <CardHeader className="pb-4">
                 <div className="flex items-start justify-between mb-3">
